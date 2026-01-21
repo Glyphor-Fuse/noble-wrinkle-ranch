@@ -1,1 +1,47 @@
 @import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-saddle: #3D2B1F;
+  --color-sage: #8A9A5B;
+  --color-parchment: #FCF5E5;
+  --color-clay: #A67B5B;
+  
+  --breakpoint-2xl: 1536px;
+}
+
+@layer base {
+  body {
+    @apply font-sans overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+.mask-slant {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px #3D2B1F;
+  color: transparent;
+}
+
+.bento-card {
+  @apply bg-white/40 backdrop-blur-sm border border-saddle/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-sage/50;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FCF5E5;
+}
+::-webkit-scrollbar-thumb {
+  background: #3D2B1F;
+}
