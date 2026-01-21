@@ -1,17 +1,13 @@
-import React, { useEffect } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
-  Trees, 
   Dna, 
-  Heart, 
-  Award, 
   MapPin, 
   ChevronRight, 
   Instagram, 
   Mail, 
   ArrowUpRight,
-  ShieldCheck,
-  Star
+  ShieldCheck
 } from 'lucide-react';
 
 // --- Components ---
@@ -43,7 +39,7 @@ const Hero = () => {
     <section className="relative h-screen min-h-[800px] overflow-hidden bg-saddle flex items-center justify-center">
       <motion.div style={{ y: y1 }} className="absolute inset-0 opacity-60">
         <img 
-          src="<span className="block"><img src="https://images.pexels.com/photos/7021727/pexels-photo-7021727.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="A Texas Longhorn standing in a wide grassy pasture with hills in the background." loading="lazy" /><a href="https://www.pexels.com/photo/photo-of-a-brown-and-white-cow-with-long-horns-7021727/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-400 block mt-0.5">Photo by Roxanne Minnish on Pexels</a></span>" 
+          src="https://images.pexels.com/photos/7021727/pexels-photo-7021727.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" 
           alt="Ranch" 
           className="w-full h-full object-cover scale-110"
         />
@@ -98,7 +94,7 @@ const HeritageStory = () => (
           className="relative z-10"
         >
           <img 
-            src="<span className="block"><img src="https://images.pexels.com/photos/12868871/pexels-photo-12868871.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Charming English Bulldog with a white and brown coat looking intently at the camera." loading="lazy" /><a href="https://www.pexels.com/photo/brown-and-white-short-coated-dog-12868871/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-400 block mt-0.5">Photo by Teja J on Pexels</a></span>" 
+            src="https://images.pexels.com/photos/12868871/pexels-photo-12868871.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" 
             className="w-full aspect-[4/5] object-cover rounded-tl-[100px] shadow-2xl" 
             alt="Noble Breed"
           />
@@ -142,9 +138,9 @@ const HeritageStory = () => (
 
 const PedigreeTree = () => {
   const nodes = [
-    { name: "King George IV", role: "Grand Sire", img: "<span className="block"><img src="https://images.pexels.com/photos/40986/dog-bulldog-white-tongue-40986.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Charming English Bulldog with tongue out on a white backdrop. Perfect pet portrait." loading="lazy" /><a href="https://www.pexels.com/photo/dog-pet-white-bulldog-40986/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-400 block mt-0.5">Photo by Public Domain Pictures on Pexels</a></span>" },
-    { name: "Lady Eleanor", role: "Grand Dam", img: "<span className="block"><img src="https://images.pexels.com/photos/28731658/pexels-photo-28731658.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Close-up portrait of a British Bulldog with a calm expression, perfect for pet lovers." loading="lazy" /><a href="https://www.pexels.com/photo/charming-english-bulldog-on-colorful-blanket-28731658/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-400 block mt-0.5">Photo by Jools Magools on Pexels</a></span>" },
-    { name: "Noble Duke", role: "Current Sire", img: "<span className="block"><img src="https://images.pexels.com/photos/40986/dog-bulldog-white-tongue-40986.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Charming English Bulldog with tongue out on a white backdrop. Perfect pet portrait." loading="lazy" /><a href="https://www.pexels.com/photo/dog-pet-white-bulldog-40986/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-400 block mt-0.5">Photo by Public Domain Pictures on Pexels</a></span>" },
+    { name: "King George IV", role: "Grand Sire", img: "https://images.pexels.com/photos/40986/dog-bulldog-white-tongue-40986.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" },
+    { name: "Lady Eleanor", role: "Grand Dam", img: "https://images.pexels.com/photos/28731658/pexels-photo-28731658.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" },
+    { name: "Noble Duke", role: "Current Sire", img: "https://images.pexels.com/photos/40986/dog-bulldog-white-tongue-40986.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" },
   ];
 
   return (
@@ -199,10 +195,10 @@ const PedigreeTree = () => {
 
 const PuppyGrid = () => {
   const pups = [
-    { name: "Barnaby", gender: "Male", color: "Lilac Tri", price: "$5,500", img: "<span className="block"><img src="https://images.pexels.com/photos/4587962/pexels-photo-4587962.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Charming French Bulldog puppy sitting against a pink backdrop, perfect for pet-loving designs." loading="lazy" /><a href="https://www.pexels.com/photo/puppy-on-pink-background-4587962/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-400 block mt-0.5">Photo by Anna Shvets on Pexels</a></span>", status: "Available" },
-    { name: "Clementine", gender: "Female", color: "Saddle Brindle", price: "$4,800", img: "<span className="block"><img src="https://images.pexels.com/photos/133069/pexels-photo-133069.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Adorable French Bulldog puppy peacefully sleeping in cozy brown sweater." loading="lazy" /><a href="https://www.pexels.com/photo/white-and-black-puppy-133069/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-400 block mt-0.5">Photo by freestocks.org on Pexels</a></span>", status: "Reserved" },
-    { name: "Winston", gender: "Male", color: "White & Red", price: "$6,200", img: "<span className="block"><img src="https://images.pexels.com/photos/40986/dog-bulldog-white-tongue-40986.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Charming English Bulldog with tongue out on a white backdrop. Perfect pet portrait." loading="lazy" /><a href="https://www.pexels.com/photo/dog-pet-white-bulldog-40986/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-400 block mt-0.5">Photo by Public Domain Pictures on Pexels</a></span>", status: "Available" },
-    { name: "Matilda", gender: "Female", color: "Fawn", price: "$5,000", img: "<span className="block"><img src="https://images.pexels.com/photos/1023018/pexels-photo-1023018.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="French Bulldog enjoying a refreshing walk in a forest stream during a sunny day outdoors." loading="lazy" /><a href="https://www.pexels.com/photo/photo-of-dog-running-on-stream-1023018/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-400 block mt-0.5">Photo by Jens Mahnke on Pexels</a></span>", status: "Available" },
+    { name: "Barnaby", gender: "Male", color: "Lilac Tri", price: "$5,500", img: "https://images.pexels.com/photos/4587962/pexels-photo-4587962.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", status: "Available" },
+    { name: "Clementine", gender: "Female", color: "Saddle Brindle", price: "$4,800", img: "https://images.pexels.com/photos/133069/pexels-photo-133069.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", status: "Reserved" },
+    { name: "Winston", gender: "Male", color: "White & Red", price: "$6,200", img: "https://images.pexels.com/photos/40986/dog-bulldog-white-tongue-40986.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", status: "Available" },
+    { name: "Matilda", gender: "Female", color: "Fawn", price: "$5,000", img: "https://images.pexels.com/photos/1023018/pexels-photo-1023018.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", status: "Available" },
   ];
 
   return (
